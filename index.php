@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <!-- ka, hab ich aus der aufgabe geklaut, am besten durch <div> ersetzen -->
+    <!-- ?? ka, hab ich aus der aufgabe geklaut, am besten durch <div> ersetzen ?? -->
     <form action="insert.php" method="post">
         <label>Nickname:</label>
         <input type="text" name="nickname" placeholder="nickname" required><br>
@@ -22,7 +22,7 @@
 
         <input type="submit" name="eintrag_senden" value="Eintrag senden">
     </form>
-    <!-- ka, hab ich aus der aufgabe geklaut, am besten durch <div> ersetzen -->
+    <!-- ?? ka, hab ich aus der aufgabe geklaut, am besten durch <div> ersetzen ?? -->
 
 </body>
 </html>
