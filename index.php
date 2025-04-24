@@ -2,6 +2,7 @@
 
 <html lang="de">
 <head>
+    <link rel="stylesheet" href="style.css" >
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eintrag hinzufuegen</title>
@@ -9,13 +10,13 @@
 <body>
     <form action="insert.php" method="post">
         <label>Nickname:</label>
-        <input type="text" name="nickname" required><br>
+        <input type="text" name="nickname" placeholder="nickname" required><br>
 
         <label>E-Mail:</label>
-        <input type="email" name="email" required><br>
+        <input type="email" name="email" placeholder="email" required><br>
 
         <label>Eintrag:</label>
-        <textarea name="entry" required></textarea><br>
+        <textarea name="entry" placeholder="passwort" required></textarea><br>
 
         <input type="submit" name="eintrag_senden" value="Eintrag senden">
     </form>
