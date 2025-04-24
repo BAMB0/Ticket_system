@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = htmlspecialchars($_POST['password'], ENT_QUOTES, 'UTF-8');
 
     //wenn das format der eingeben stimmt wird geprüft ob der nutzer bereits existiert
-    $stmt = $con->prepare("SELECT * FROM users WHERE username=:username OR email=:email"); //sucht in der db nach den eingegemenen user u. pw
+    $stmt = $pdo->prepare("SELECT * FROM users WHERE username=:username OR email=:email"); //sucht in der db nach den eingegemenen user u. pw
     // ersetzt die platzhalter mit den variablen
     $stmt->bindParam(":username", $username);
     $stmt->bindParam(":email", $email);
