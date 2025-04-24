@@ -1,18 +1,5 @@
 <!DOCTYPE html>
 
-<?php 
-    require("insert.php");
-
-    // fragt ab ob es übertragen wurde
-    if (isset($_Post["submit"])) {
-	
-    var_dump($_Post);
-
-    }
-    
-
-?>
-
 <html lang="de">
 <head>
     <link rel="stylesheet" href="style.css" >
@@ -31,7 +18,7 @@
         <input type="email" name="email" placeholder="email" required><br>
 
         <label>Passwort:</label>
-        <input type="password" name="password" placeholder="password" required></textarea><br>
+        <input type="password" name="password" placeholder="password" required><br>
 
         <input type="submit" name="eintrag_senden" value="Eintrag senden">
     </form>

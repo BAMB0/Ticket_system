@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$dbname = 'deine_datenbank';
+$dbname = 'ticketsystem';
 $user = 'dein_benutzername';
 $pass = 'dein_passwort';
 
