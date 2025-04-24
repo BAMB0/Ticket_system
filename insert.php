@@ -1,11 +1,20 @@
 <?php
 require 'db.php';
+/*
+$dsn = "mysql:dbname=ticketsystem;host=localhost";
+$username = "root";
+$password = "";
+// PDO = php data objects - schnittstelle für die sql datenbank - dsn = data source dame = selbsterklaerend, suammengesestzt aus datenbank und host
+$con = new PDO($dsn, $username, $password);
+*/
+
+
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Eingaben sichern gegen XSS
     $username = htmlspecialchars($_POST['username'], ENT_QUOTES, 'UTF-8');
     $email = htmlspecialchars($_POST['email'], ENT_QUOTES, 'UTF-8');
-    $password = PASSWORD_HASH($_POST['password'], ENT_QUOTES, 'UTF-8');
+    $password = htmlspecialchars($_POST['password'], ENT_QUOTES, 'UTF-8');
 
     //wenn das format der eingeben stimmt wird geprüft ob der nutzer bereits existiert
     $stmt = $pdo->prepare("SELECT * FROM users WHERE username=:username OR email=:email"); //sucht in der db nach den eingegemenen user u. pw
