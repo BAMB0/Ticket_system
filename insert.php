@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Eingaben sichern gegen XSS
     $username = htmlspecialchars($_POST['username'], ENT_QUOTES, 'UTF-8');
     $email = htmlspecialchars($_POST['email'], ENT_QUOTES, 'UTF-8');
-    $password = htmlspecialchars($_POST['password'], ENT_QUOTES, 'UTF-8');
+    $password = PASSWORD_HASH($_POST['password'], PASSWORD_DEFAULT);
 
     //wenn das format der eingeben stimmt wird geprüft ob der nutzer bereits existiert
     $stmt = $pdo->prepare("SELECT * FROM users WHERE username=:username OR email=:email"); //sucht in der db nach den eingegemenen user u. pw
@@ -33,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($stmt->execute(['username' => $username, 'email' => $email, 'password' => $password]))
         {
             echo "Account erfolgreich gespeichert!";
+            header("Location: home.php");
         }
         else
         {
