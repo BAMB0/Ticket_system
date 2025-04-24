@@ -41,12 +41,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     else
     {
-        echo "Account erfolgreich gespeichert!";
+        echo "Account existiert bereits.";
     }
 }
 else
 {
-    echo "Eingeben ensprechen nicht den Erwartungen";
+    echo "Fehler beim erstellen des Accounts.";
 }
 
 ?>
