@@ -8,6 +8,8 @@
     <title>Eintrag hinzufuegen</title>
 </head>
 <body>
+
+    <!-- ?? ka, hab ich aus der aufgabe geklaut, am besten durch <div> ersetzen ?? -->
     <form action="insert.php" method="post">
         <label>Nickname:</label>
         <input type="text" name="nickname" placeholder="nickname" required><br>
@@ -15,11 +17,13 @@
         <label>E-Mail:</label>
         <input type="email" name="email" placeholder="email" required><br>
 
-        <label>Eintrag:</label>
-        <textarea name="entry" placeholder="passwort" required></textarea><br>
+        <label>Passwort:</label>
+        <input type="password" name="password" placeholder="password" required></textarea><br>
 
         <input type="submit" name="eintrag_senden" value="Eintrag senden">
     </form>
+    <!-- ?? ka, hab ich aus der aufgabe geklaut, am besten durch <div> ersetzen ?? -->
+
 </body>
 </html>
 
