@@ -18,10 +18,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Sicheres Einfügen mit PDO
     $stmt = $pdo->prepare("INSERT INTO entries (nickname, email, password) VALUES (:nickname, :email, :password)");
-    if ($stmt->execute(['nickname' => $nickname, 'email' => $email, 'password' => password])) {
-        echo "Eintrag erfolgreich gespeichert!";
+    if ($stmt->execute(['nickname' => $nickname, 'email' => $email, 'password' => $password])) {
+        echo "Account erfolgreich gespeichert!";
     } else {
-        echo "Fehler beim Speichern des Eintrags.";
+        echo "Fehler beim erstellen des Accounts.";
     }
 }
 

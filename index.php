@@ -20,7 +20,7 @@
         <label>Passwort:</label>
         <input type="password" name="password" placeholder="password" required><br>
 
-        <input type="submit" name="eintrag_senden" value="Eintrag senden">
+        <input type="submit" name="create_Account" value="create_Account">
     </form>
     <!-- ka, hab ich aus der aufgabe geklaut, am besten durch <div> ersetzen -->
 
