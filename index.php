@@ -12,7 +12,7 @@
     <!-- ka, hab ich aus der aufgabe geklaut, am besten durch <div> ersetzen -->
     <form action="insert.php" method="post">
         <label>Nickname:</label>
-        <input type="text" name="nickname" placeholder="nickname" required><br>
+        <input type="nickname" name="nickname" placeholder="nickname" required><br>
 
         <label>E-Mail:</label>
         <input type="email" name="email" placeholder="email" required><br>
