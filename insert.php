@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($stmt->execute(['username' => $username, 'email' => $email, 'password' => $password]))
         {
             echo "Account erfolgreich gespeichert!";
-            header("Location: home.php");
+            header("Location: home.html");
         }
         else
         {
