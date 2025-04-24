@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = htmlspecialchars($_POST['password'], ENT_QUOTES, 'UTF-8');
 
     // Sicheres Einfügen mit PDO
-    $stmt = $pdo->prepare("INSERT INTO entries (nickname, email, password) VALUES (:nickname, :email, :password)");
+    $stmt = $pdo->prepare("INSERT INTO users (nickname, email, password) VALUES (:nickname, :email, :password)");
     if ($stmt->execute(['nickname' => $nickname, 'email' => $email, 'password' => $password])) {
         echo "Account erfolgreich gespeichert!";
     } else {
