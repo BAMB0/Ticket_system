@@ -13,7 +13,7 @@ $stmt->execute();
 $user_id = $stmt->fetch(PDO::FETCH_ASSOC); //<- fetch gibt ein assoziatives Array zurück, das die User_id enthält
 
 // benutzt die user_id wird benutzt um die posts des nutzers zu differenzieren
-$stmt = $pdo->prepare("SELECT * FROM users WHERE user_id = :user_id");
+$stmt = $pdo->prepare("SELECT * FROM posts WHERE user_id = :user_id");
 $stmt->bindParam(":post_id", $id, PDO::PARAM_INT);
 $stmt->bindParam(":post_content", $post_content, PDO::PARAM_STR);
 $stmt->bindParam(":post_date", $post_date, PDO::PARAM_STR);
