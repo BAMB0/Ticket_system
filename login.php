@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     // Eingaben sichern gegen XSS
     $username = htmlspecialchars($_POST['username'], ENT_QUOTES, 'UTF-8');
-    $password = PASSWORD_HASH($_POST['password'], PASSWORD_DEFAULT);
+    $password = $_POST['password'];
 
     //dasselbe spiel wie bei insert.php nur ohne passwort
     $stmt = $pdo->prepare("SELECT * FROM users WHERE username=:username");
