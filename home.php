@@ -8,13 +8,18 @@
     <title>Deine Fehlermeldungen</title>
 </head>
 <body>
-    <h1>
         <?php
         session_start();
         echo $_SESSION["username"];
         ?>
-    </h1>
+        
+    <form action="post.php" method="post">
 
+        <label>Eintrag:</label>
+        <textarea name="text" required></textarea><br>
+
+        <input type="submit" name="Beitrag erstellen" value="Beitrag erstellen">
+    </form>
 
 
 </body>
