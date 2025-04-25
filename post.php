@@ -11,13 +11,27 @@ $stmt = $pdo->prepare("SELECT id FROM users WHERE username = :username");
 $stmt->bindParam(":username", $username, PDO::PARAM_STR); // <- der letzte teil ist wichtig, damit der username als string interpretiert wird
 $stmt->execute();  
 $user_id = $stmt->fetch(PDO::FETCH_ASSOC); //<- fetch gibt ein assoziatives Array zurück, das die User_id enthält
+var_dump( $user_id); // gibt die User_id aus
+
+$u_id = $user_id['id']; // <- hier wird die User_id aus dem Array geholt
+var_dump($u_id); // gibt die User_id aus)
+
+
 
 // benutzt die user_id wird benutzt um die posts des nutzers zu differenzieren
 $stmt = $pdo->prepare("SELECT * FROM posts WHERE user_id = :user_id");
-$stmt->bindParam(":post_id", $id, PDO::PARAM_INT);
+ $stmt->bindParam(":user_id", $u_id, PDO::PARAM_INT);
+/*  $stmt->bindParam(":post_id", $id, PDO::PARAM_INT);
 $stmt->bindParam(":post_content", $post_content, PDO::PARAM_STR);
 $stmt->bindParam(":post_date", $post_date, PDO::PARAM_STR);
+*/
 $stmt->execute();
-$post = $stmt->fetch(PDO::FETCH_ASSOC);
 
-var_dump($post); // gibt den Inhalt des Posts aus
+    while ($row = $stmt->fetch() ){
+        foreach ($row as $r) {
+            print "$r <br>";
+        }
+    }
+
+
+//var_dump($post); // gibt den Inhalt des Posts aus
