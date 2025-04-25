@@ -1,14 +1,5 @@
 <?php
 require 'db.php';
-/*
-$dsn = "mysql:dbname=ticketsystem;host=localhost";
-$username = "root";
-$password = "";
-// PDO = php data objects - schnittstelle für die sql datenbank - dsn = data source dame = selbsterklaerend, suammengesestzt aus datenbank und host
-$con = new PDO($dsn, $username, $password);
-*/
-
-
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Eingaben sichern gegen XSS
