@@ -1,22 +1,3 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
-
-/.vs/ProjectSettings.json
-/.vs/slnx.sqlite
-/.vs/Ticket_system/config/applicationhost.config
-/.vs/Ticket_system/FileContentIndex/3673687e-8746-4125-bc00-4cdd315bbe7c.vsidx
-/.vs/Ticket_system/FileContentIndex/7461a487-9671-4893-ace3-8069f8eed8e5.vsidx
-/.vs/Ticket_system/FileContentIndex/8d3efd8a-da0c-4040-a5a4-ab8e34d99b2b.vsidx
-/.vs/Ticket_system/FileContentIndex/75e4d07d-6be9-4462-8435-2530ba800924.vsidx
-/.vs/Ticket_system/FileContentIndex/1069615b-8917-4c36-8bcf-9242aeb368f5.vsidx
-/.vs/Ticket_system/FileContentIndex/74ce1be9-b7b3-4a01-8788-7ab9936321a9.vsidx
-/.vs/Ticket_system/FileContentIndex/fd431c2e-8279-4000-afd6-c1fbedf0a7d0.vsidx
-/.vs/Ticket_system/v17/.wsuo
-/.vs/VSWorkspaceState.json
-/.vs/Ticket_system/FileContentIndex/6c7abf0d-17f3-432d-b0bf-aa3c83f6ec2e.vsidx
-*.vsidx
-
 ##### Windows
 # Windows thumbnail cache files
 Thumbs.db
