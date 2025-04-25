@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         echo "Anmeldung erfolgreich!";
         session_start();
         $_SESSION['username'] = $username; //session wird gestartet und der username in die session geschrieben
-        header("Location: home.html");
+        header("Location: home.php");
     } 
     else 
     {
@@ -46,7 +46,7 @@ else
         if ($stmt->execute(['username' => $username, 'password' => $password]))
         {
             echo "Account erfolgreich gespeichert!";
-            header("Location: home.html");
+            header("Location: home.php");
         }
         else
         {

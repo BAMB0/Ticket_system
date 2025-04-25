@@ -21,15 +21,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Sicheres Einfügen mit PDO
             $stmt = $pdo->prepare("INSERT INTO users (username, email, password) VALUES (:username, :email, :password)");
 
-        if ($stmt->execute(['username' => $username, 'email' => $email, 'password' => $password]))
-        {
-            echo "Account erfolgreich gespeichert!";
-            header("Location: home.html");
-        }
-        else
-        {
-            echo "Fehler beim erstellen des Accounts.";
-        }
+    if ($stmt->execute(['username' => $username, 'email' => $email, 'password' => $password]))
+    {
+        echo "Account erfolgreich gespeichert!";
+        header("Location: home.php");
+    }
+    else
+    {
+        echo "Fehler beim erstellen des Accounts.";
+    }
     }
     else
     {
