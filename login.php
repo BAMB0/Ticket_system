@@ -19,12 +19,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
     if ($checkPassword === true) 
     {
-	header("Location: home.html");
-    }
-    else
+        // Passwort ist korrekt
+        echo "Anmeldung erfolgreich!";
+        header("Location: home.html");
+    } 
+    else 
     {
-    echo "Passwort falsch";
+        // Passwort ist falsch
+        echo "Falsches Passwort.";
     }
+
 }
 else 
 {
