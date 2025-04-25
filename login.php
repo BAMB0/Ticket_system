@@ -17,14 +17,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     $checkPassword = password_verify($password, $passwordHashed); 
     //password_verify vergleicht das eingegebene und das encryptete passwort und gibt einen bool zurück 
 
-    if ($checkPassword === false) 
+    if ($checkPassword === true) 
     {
-    echo "Passwort ist falsch.";
-    }
-    elseif ($checkPassword === true)
-    {
-
 	header("Location: home.html");
+    }
+    else
+    {
+    echo "Passwort falsch";
     }
 }
 else 
