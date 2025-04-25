@@ -13,7 +13,7 @@
         echo $_SESSION["username"];
         ?>
         
-    <form action="insert.php" method="post">
+    <form action="post.php" method="post">
 
         <label>Eintrag:</label>
         <textarea name="text" required></textarea><br>
