@@ -12,6 +12,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     $stmt->bindParam(":username", $username);
     $stmt->execute();
     $userExists = $stmt->fetchall(); // gibt ein array mit nutzern wieder die mit dem namen übereinstimmen
+
+    $passwordHashed = $userExists[0]["password"]; //passwordHashed holt sich das Passwort vom UserExists Array
+    $checkPassword = password_verify($password, $passwordHashed); 
+    //password_verify vergleicht das eingegebene und das encryptete passwort und gibt einen bool zurück 
+
+    if ($checkPassword === false) 
+    {
+    echo "Passwort ist falsch.";
+    }
+    else {
+	header("Location: home.html");
+}
+
+
 }
 else 
 {
