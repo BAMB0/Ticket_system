@@ -8,10 +8,6 @@
     <title>Deine Fehlermeldungen</title>
 </head>
 <body>
-        <?php
-        session_start();
-        echo $_SESSION["username"];
-        ?>
         
     <form action="post.php" method="post">
 

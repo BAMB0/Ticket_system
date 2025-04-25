@@ -34,4 +34,4 @@ $stmt->execute();
     }
 
 
-//var_dump($post); // gibt den Inhalt des Posts aus
+// hier muss irgendwo ein knopf hin um die posts anzuzeigen
