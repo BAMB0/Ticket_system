@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     }
     elseif ($checkPassword === true)
     {
+
 	header("Location: home.html");
     }
 }
