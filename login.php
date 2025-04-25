@@ -21,6 +21,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         // Passwort ist korrekt
         echo "Anmeldung erfolgreich!";
+        session_start();
+        $_SESSION['username'] = $username; //session wird gestartet und der username in die session geschrieben
         header("Location: home.html");
     } 
     else 
