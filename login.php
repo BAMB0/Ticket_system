@@ -21,11 +21,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     {
     echo "Passwort ist falsch.";
     }
-    else {
+    elseif ($checkPassword === true)
+    {
 	header("Location: home.html");
-}
-
-
+    }
 }
 else 
 {
