@@ -17,6 +17,13 @@ $u_id = $user_id['id']; // <- hier wird die User_id aus dem Array geholt
 $_SESSION['id'] = $user_id['id']; // <- hier wird die User_id in die Session geschrieben
 var_dump($u_id); // gibt die User_id aus)
 
+// admin test
+if ($_SESSION['is_admin'] == 1) {
+    echo "Du bist Admin";
+} else {
+    echo "Du bist kein Admin";
+}
+
 // benutzt die user_id wird benutzt um die posts des nutzers zu differenzieren
 $stmt = $pdo->prepare("SELECT * FROM posts WHERE user_id = :user_id");
 $stmt->bindParam(":user_id", $u_id, PDO::PARAM_INT);
