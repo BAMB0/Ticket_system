@@ -11,11 +11,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     $stmt = $pdo->prepare("SELECT * FROM users WHERE username=:username");
     $stmt->bindParam(":username", $username);
     $stmt->execute();
-    $userExists = $stmt->fetchall(); // gibt ein array mit nutzern wieder die mit dem namen übereinstimmen
+    $userExists = $stmt->fetchall(); // gibt ein array mit nutzern wieder die mit dem namen ï¿½bereinstimmen
 
     $passwordHashed = $userExists[0]["password"]; //passwordHashed holt sich das Passwort vom UserExists Array
     $checkPassword = password_verify($password, $passwordHashed); 
-    //password_verify vergleicht das eingegebene und das encryptete passwort und gibt einen bool zurück 
+    //password_verify vergleicht das eingegebene und das encryptete passwort und gibt einen bool zurï¿½ck 
 
     if ($checkPassword === true) 
     {
@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         echo "Anmeldung erfolgreich!";
         session_start();
         $_SESSION['username'] = $username; //session wird gestartet und der username in die session geschrieben
-        header("Location: home.php");
+        header("Location: post.php");
     } 
     else 
     {
@@ -40,7 +40,7 @@ else
 /*
     if (!$userAlreadyExists)
     {
-            // Sicheres Einfügen mit PDO
+            // Sicheres Einfï¿½gen mit PDO
             $stmt = $pdo->prepare("INSERT INTO users (username, password) VALUES (:username, :password)");
 
         if ($stmt->execute(['username' => $username, 'password' => $password]))
