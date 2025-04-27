@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         
         If ($userExists[0]['is_admin'] == 1) 
         {
-            header("Location: replies.php"); // wenn der nutzer admin ist wird er auf die admin seite weitergeleitet
+            header("Location: admin.php"); // wenn der nutzer admin ist wird er auf die admin seite weitergeleitet
         } else 
         {
             header("Location: home.php"); // wenn der nutzer kein admin ist wird er auf die home seite weitergeleitet
