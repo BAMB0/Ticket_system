@@ -10,7 +10,7 @@ $username = $_SESSION["username"];
 $stmt = $pdo->prepare("SELECT id FROM users WHERE username = :username");  
 $stmt->bindParam(":username", $username, PDO::PARAM_STR); // <- der letzte teil ist wichtig, damit der username als string interpretiert wird
 $stmt->execute();  
-$user_id = $stmt->fetch(PDO::FETCH_ASSOC); //<- fetch gibt ein assoziatives Array zur�ck, das die User_id enth�lt
+$user_id = $stmt->fetch(PDO::FETCH_ASSOC); //<- fetch gibt ein assoziatives Array zurueck, das die User_id enthaelt
 var_dump( $user_id); // gibt die User_id aus
 
 // admin test
@@ -26,7 +26,8 @@ $stmt->bindParam(":user_id", $u_id, PDO::PARAM_INT);
 
 $stmt->execute();
 
-    while ($row = $stmt->fetch() ){
+    while ($row = $stmt->fetch() )
+    {
         foreach ($row as $r) {
             print "$r <br>";
         }
