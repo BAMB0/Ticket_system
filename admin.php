@@ -23,7 +23,7 @@ while ($row = $stmt->fetch() ) // Holt sich alle Posts aus der DB und gibt sie i
 </head>
 <body>
         <h3>Auf Beitrag Antworten<h3>
-    <form action="post.php" method="post">
+    <form action="reply.php" method="post">
 
         <input type="post_id" name="post_id" placeholder="post_id" required><br>
 
