@@ -1,9 +1,8 @@
 <?php
 require 'db.php';
-session_start();
-echo $_SESSION["id"];  
-$user_id = $_SESSION["id"];
-var_dump($user_id); // gibt die User_id aus)
+session_start(); 
+echo $_SESSION["id"]; // gibt die User_id aus
+$user_id = $_SESSION["id"]; //<- hier wird die User_id aus dem Array geholt
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
