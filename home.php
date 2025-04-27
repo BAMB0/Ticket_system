@@ -13,10 +13,6 @@ $stmt->execute();
 $user_id = $stmt->fetch(PDO::FETCH_ASSOC); //<- fetch gibt ein assoziatives Array zur�ck, das die User_id enth�lt
 var_dump( $user_id); // gibt die User_id aus
 
-$u_id = $user_id['id']; // <- hier wird die User_id aus dem Array geholt
-$_SESSION['id'] = $user_id['id']; // <- hier wird die User_id in die Session geschrieben
-var_dump($u_id); // gibt die User_id aus)
-
 // admin test
 if ($_SESSION['is_admin'] == 1) {
     echo "Du bist Admin";
@@ -27,10 +23,7 @@ if ($_SESSION['is_admin'] == 1) {
 // benutzt die user_id wird benutzt um die posts des nutzers zu differenzieren
 $stmt = $pdo->prepare("SELECT * FROM posts WHERE user_id = :user_id");
 $stmt->bindParam(":user_id", $u_id, PDO::PARAM_INT);
-/*  $stmt->bindParam(":post_id", $id, PDO::PARAM_INT);
-$stmt->bindParam(":post_content", $post_content, PDO::PARAM_STR);
-$stmt->bindParam(":post_date", $post_date, PDO::PARAM_STR);
-*/
+
 $stmt->execute();
 
     while ($row = $stmt->fetch() ){
