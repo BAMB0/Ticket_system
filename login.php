@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         echo "Anmeldung erfolgreich!";
         session_start();
         $_SESSION['username'] = $username; //session wird gestartet und der username in die session geschrieben
-        header("Location: post.php");
+        header("Location: home.php");
     } 
     else 
     {
