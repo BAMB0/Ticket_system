@@ -11,11 +11,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     $stmt = $pdo->prepare("SELECT * FROM users WHERE username=:username");
     $stmt->bindParam(":username", $username);
     $stmt->execute();
-    $userExists = $stmt->fetchall(); // gibt ein array mit nutzern wieder die mit dem namen �bereinstimmen
+    $userExists = $stmt->fetchall(); // gibt ein array mit nutzern wieder die mit dem namen uebereinstimmen
 
     $passwordHashed = $userExists[0]["password"]; //passwordHashed holt sich das Passwort vom UserExists Array
     $checkPassword = password_verify($password, $passwordHashed); 
-    //password_verify vergleicht das eingegebene und das encryptete passwort und gibt einen bool zur�ck 
+    //password_verify vergleicht das eingegebene und das encryptete passwort und gibt einen bool zurueck 
 
     if ($checkPassword === true) 
     {
@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         echo "Anmeldung erfolgreich!";
         session_start();
         $_SESSION['username'] = $username; //session wird gestartet und der username in die session geschrieben
+        $_SESSION['is_admin'] = $userExists[0]['is_admin']; // admin status wird in die session geschrieben
         header("Location: home.php");
     } 
     else 
