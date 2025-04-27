@@ -9,12 +9,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     $reply_content = htmlspecialchars($_POST['reply_content'], ENT_QUOTES, 'UTF-8'); // Eingaben sichern gegen XSS
     
     // Sicheres Einfügen mit PDO
-    $stmt = $pdo->prepare("INSERT INTO replies (post_id, reply_content) VALUES (:post_id, :reply_content)");
+    $stmt = $pdo->prepare("INSERT INTO replies (user_id, post_id, reply_content) VALUES (:user_id, :post_id, :reply_content)");
 
-    if ($stmt->execute(['post_id' => $post_id, 'reply_content' => $reply_content]))
+    if ($stmt->execute(['user_id' => $user_id, 'post_id' => $post_id, 'reply_content' => $reply_content]))
     {
         echo "Beitrag erfolgreich gespeichert!";
-        header("Location: home.php");
+        header("Location: admin.php");
     }
     else
     {
