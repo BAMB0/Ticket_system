@@ -2,7 +2,7 @@
 require 'db.php';  
 
 session_start();  
-echo $_SESSION["username"];  
+echo $_SESSION["username"];
 $username = $_SESSION["username"];  
 //$text = htmlspecialchars($_POST['text'], ENT_QUOTES, 'UTF-8');  
 
@@ -14,11 +14,12 @@ $user_id = $stmt->fetch(PDO::FETCH_ASSOC); //<- fetch gibt ein assoziatives Arra
 var_dump( $user_id); // gibt die User_id aus
 
 $u_id = $user_id['id']; // <- hier wird die User_id aus dem Array geholt
+$_SESSION['id'] = $user_id['id']; // <- hier wird die User_id in die Session geschrieben
 var_dump($u_id); // gibt die User_id aus)
 
 // benutzt die user_id wird benutzt um die posts des nutzers zu differenzieren
 $stmt = $pdo->prepare("SELECT * FROM posts WHERE user_id = :user_id");
- $stmt->bindParam(":user_id", $u_id, PDO::PARAM_INT);
+$stmt->bindParam(":user_id", $u_id, PDO::PARAM_INT);
 /*  $stmt->bindParam(":post_id", $id, PDO::PARAM_INT);
 $stmt->bindParam(":post_content", $post_content, PDO::PARAM_STR);
 $stmt->bindParam(":post_date", $post_date, PDO::PARAM_STR);
@@ -42,10 +43,10 @@ $stmt->execute();
 </head>
 <body>
         <h3>neuen Eintrag posten<h3>
-    <form action="home.php" method="post">
+    <form action="post.php" method="post">
 
         <label>Eintrag:</label>
-        <textarea name="text" required></textarea><br>
+        <textarea name="post_content" required></textarea><br>
 
         <input type="submit" name="neuen Beitrag erstellen" value="neuen Beitrag erstellen">
     </form>
