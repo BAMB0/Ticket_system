@@ -11,26 +11,20 @@ $stmt = $pdo->prepare("SELECT id FROM users WHERE username = :username");
 $stmt->bindParam(":username", $username, PDO::PARAM_STR); // <- der letzte teil ist wichtig, damit der username als string interpretiert wird
 $stmt->execute();  
 $user_id = $stmt->fetch(PDO::FETCH_ASSOC); //<- fetch gibt ein assoziatives Array zurueck, das die User_id enthaelt
-var_dump( $user_id); // gibt die User_id aus
-
-// admin test
-if ($_SESSION['is_admin'] == 1) {
-    echo "Du bist Admin";
-} else {
-    echo "Du bist kein Admin";
-}
 
 // benutzt die user_id wird benutzt um die posts des nutzers zu differenzieren
 $stmt = $pdo->prepare("SELECT * FROM posts WHERE user_id = :user_id");
-$stmt->bindParam(":user_id", $u_id, PDO::PARAM_INT);
+$stmt->bindParam(":user_id", $user_id, PDO::PARAM_INT);
 
 $stmt->execute();
 
     while ($row = $stmt->fetch() )
     {
+        echo '<div class="post">';
         foreach ($row as $r) {
             print "$r <br>";
         }
+        echo '</div>';
     }
 
 ?>

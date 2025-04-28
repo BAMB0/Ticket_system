@@ -12,6 +12,7 @@ while ($row = $stmt->fetch()) // Holt sich alle Posts aus der DB und gibt sie in
     }
     echo '</div>';
 }
+
 ?>
 
 <html lang="de">
