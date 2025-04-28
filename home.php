@@ -41,11 +41,41 @@ $stmt->execute();
     <form action="post.php" method="post">
 
         <label>Eintrag:</label>
-        <textarea name="post_content" required></textarea><br>
+        <br><textarea name="post_content" required></textarea><br>
 
         <input type="submit" name="neuen Beitrag erstellen" value="neuen Beitrag erstellen">
     </form>
 
+    <!-- impressum-->
+    <footer class="footer" id="contact">
+        <h2 class="heading"><span>Kontakt</span></h2>
+
+        <div class="footer-content">
+
+            <div class="footer-container">
+                <div class="footer-box">
+
+                    <p>Dennis Eiben</p>
+                    <p>Ihausener Str.72</p>
+                    <p>26655 Westerstede</p>
+                    <p>Vertreten durch: Dennis Eiben</p>
+                </div>
+
+                <div class="footer-box">
+
+                    <p>Telefon: 0176 80460198</p>
+                    <p>E-Mail: dennis_eiben@web.de</p>
+
+                    <div class="footer-layer">
+                        <a href="mailto: dennis_eiben@web.de" class="btn">E-Mail senden</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
 
 </body>
 </html>
