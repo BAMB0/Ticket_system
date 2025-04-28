@@ -1,4 +1,14 @@
 <?php
+session_start(); // Startet die Session
+
+// Überprüfen, ob der Benutzer angemeldet ist und ob er Adminrechte hat
+if (!isset($_SESSION['username']) || $_SESSION['is_admin'] != 1) 
+{
+    // Wenn nicht angemeldet oder kein Admin, Weiterleitung zur Login-Seite
+    header("Location: index.html");
+    exit(); // Beendet das Skript
+}
+
 require 'db.php';
 
 $stmt = $pdo->prepare("SELECT * FROM posts"); // Holt sich alle Posts aus der DB

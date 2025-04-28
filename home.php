@@ -1,4 +1,12 @@
 <?php  
+
+if (!isset($_SESSION['username'])) 
+{
+    // Wenn nicht angemeldet, Weiterleitung zur Login-Seite
+    header("Location: index.html");
+    exit(); // Beendet das Skript
+}
+
 require 'db.php';  
 
 session_start();  

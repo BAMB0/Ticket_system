@@ -47,31 +47,4 @@ else
     echo "Fehler beim Anmelden.";
 }
 
-/*
-    if (!$userAlreadyExists)
-    {
-            // Sicheres Einf�gen mit PDO
-            $stmt = $pdo->prepare("INSERT INTO users (username, password) VALUES (:username, :password)");
-
-        if ($stmt->execute(['username' => $username, 'password' => $password]))
-        {
-            echo "Account erfolgreich gespeichert!";
-            header("Location: home.php");
-        }
-        else
-        {
-            echo "Fehler beim erstellen des Accounts.";
-        }
-    }
-    else
-    {
-        echo "Account existiert bereits.";
-    }
-}
-else
-{
-    echo "Fehler beim erstellen des Accounts.";
-}
-*/
-
 ?>
