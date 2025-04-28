@@ -9,13 +9,21 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Schriftart setzen */
 }
 
+:root {
+    --bg-color: #ac91ff;
+    --second-bg-color: #533758;
+    --text-color: #000000;
+    --main-color: #ffffff;
+    --link-color: #00e9ff;
+}
+
 html {
     height: 100%; /* Höhe auf 100% setzen */
 }
 
 body {
-    background-color: #f0f0f0; /* Hintergrundfarbe */
-    color: #333; /* Textfarbe */
+    background-color: var(--bg-color); /* Hintergrundfarbe */
+    color: var(--text-color); /* Textfarbe */
     font-size: 16px; /* Schriftgröße */
     line-height: 1.6; /* Zeilenhöhe */
     padding: 20px; /* Innenabstand */
