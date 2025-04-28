@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         echo "Anmeldung erfolgreich!";
         session_start();
         $_SESSION['username'] = $username; //session wird gestartet und der username in die session geschrieben
+        $_SESSION['id'] = $userExists[0]['id']; // id wird in die session geschrieben
         $_SESSION['is_admin'] = $userExists[0]['is_admin']; // admin status wird in die session geschrieben
         
         If ($userExists[0]['is_admin'] == 1) 
