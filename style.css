@@ -1,0 +1,11 @@
+.post {
+    border: 1px solid #ccc; /* Rahmen um jeden Post */
+    padding: 10px; /* Innenabstand */
+    margin: 10px 0; /* Abstand zwischen den Posts */
+    background-color: #f9f9f9; /* Hintergrundfarbe */
+    border-radius: 5px; /* Abgerundete Ecken */
+}
+
+.post p {
+    margin: 5px 0; /* Abstand zwischen den Zeilen im Post */
+}
