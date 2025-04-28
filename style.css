@@ -40,14 +40,3 @@ body {
 .post p {
     margin: 5px 0; /* Abstand zwischen den Zeilen im Post */
 }
-
-.btn {
-    display: inline; /* Inline-Block-Element */
-    padding: 1rem 2.8rem; /* Innenabstand */
-    background: var(--main-color); /* Hintergrundfarbe */
-    border-radius: 4rem; /* Abgerundete Ecken */
-    font-size: 1.6rem; /* Schriftgröße */
-    color: var(--second-bg-color); /* Textfarbe */
-    letter-spacing: .1rem; /* Buchstabenabstand */
-    font-weight: 600; /* Schriftdicke */
-}
