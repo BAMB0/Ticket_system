@@ -1,3 +1,26 @@
+* {
+    margin: 0; /* Standardabstand zurücksetzen */
+    padding: 0; /* Standardpolsterung zurücksetzen */
+    box-sizing: border-box; /* Box-Modell auf border-box setzen */
+    text-decoration: none; /* Unterstreichung entfernen */
+    border: none; /* Rahmen entfernen */
+    outline: none;  /* Umriss entfernen */
+    scroll-behavior: smooth; /* Sanftes Scrollen aktivieren */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Schriftart setzen */
+}
+
+html {
+    height: 100%; /* Höhe auf 100% setzen */
+}
+
+body {
+    background-color: #f0f0f0; /* Hintergrundfarbe */
+    color: #333; /* Textfarbe */
+    font-size: 16px; /* Schriftgröße */
+    line-height: 1.6; /* Zeilenhöhe */
+    padding: 20px; /* Innenabstand */
+}
+
 .post {
     border: 1px solid #ccc; /* Rahmen um jeden Post */
     padding: 10px; /* Innenabstand */
@@ -8,4 +31,15 @@
 
 .post p {
     margin: 5px 0; /* Abstand zwischen den Zeilen im Post */
+}
+
+.btn {
+    display: inline; /* Inline-Block-Element */
+    padding: 1rem 2.8rem; /* Innenabstand */
+    background: var(--main-color); /* Hintergrundfarbe */
+    border-radius: 4rem; /* Abgerundete Ecken */
+    font-size: 1.6rem; /* Schriftgröße */
+    color: var(--second-bg-color); /* Textfarbe */
+    letter-spacing: .1rem; /* Buchstabenabstand */
+    font-weight: 600; /* Schriftdicke */
 }
